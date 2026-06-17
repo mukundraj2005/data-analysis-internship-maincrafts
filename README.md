@@ -1,39 +1,29 @@
 # 📊 Data Analysis with Python Internship
 ## Maincrafts Technology | Intern ID: MT5153
-
 ---
-
 ## 👤 About
-
 **Intern:** Mukund Rajpurohit  
 **Intern ID:** MT5153  
 **Domain:** Data Analysis with Python  
 **Duration:** 20 May 2026 – 20 July 2026 (8 Weeks)  
 **Organization:** Maincrafts Technology  
-
 ---
-
 ## 📁 Repository Structure
-
 ```
 data-analysis-internship-maincrafts/
 ├── Task1_StudentPerformance_MukundRajpurohit.ipynb
-└── Task2_TitanicDataset_MukundRajpurohit.ipynb
+├── Task2_TitanicDataset_MukundRajpurohit.ipynb
+└── Task3_Titanic_EDA.ipynb
 ```
-
 ---
-
 ## ✅ Tasks Completed
-
 ### 📌 Task 1 — Student Performance Dataset Analysis
 - Loaded and explored the Student Performance dataset
 - Performed data cleaning and handled missing values
 - Analyzed factors affecting student scores (gender, parental education, test prep)
 - Visualized score distributions using Matplotlib & Seaborn
 - **Libraries:** Pandas, Matplotlib, Seaborn
-
 ---
-
 ### 📌 Task 2 — Titanic Dataset Survival Analysis
 - Loaded the Titanic dataset and explored its structure
 - Cleaned missing values (Age filled with median, Cabin dropped, Embarked filled with mode)
@@ -48,11 +38,25 @@ data-analysis-internship-maincrafts/
   - Bar chart — Survival rate by Age Group (Bonus)
 - Generated a final summary report with all key insights
 - **Libraries:** Pandas, Matplotlib, Seaborn, NumPy
-
 ---
-
+### 📌 Task 3 — Mini Exploratory Data Analysis (EDA) on Titanic Dataset
+- Performed a deeper EDA on the Titanic dataset, building on Task 2 with refined imputation and additional engineered features
+- Cleaned missing values (Age filled with mean, Embarked filled with mode, Cabin dropped)
+- Engineered new features:
+  - **AgeGroup** — binned into Child, Teen, Young Adult, Adult, and Senior
+  - **FamilySize** — combined SibSp and Parch into a single feature
+- Answered key analysis questions using groupby-based insights:
+  - Survival rate by Age Group
+  - Survival rate by Embarkation Port
+  - Survival rate by Family Size
+- Created 4 visualizations:
+  - Histogram with KDE — Age Distribution of Passengers
+  - Correlation Heatmap — relationships between numeric features
+  - Bar chart — Survival Rate by Family Size
+  - Bar chart — Survival Rate by Age Group
+- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn
+---
 ## 🛠 Tech Stack
-
 | Tool | Purpose |
 |------|---------|
 | Python 3 | Core programming language |
@@ -61,21 +65,21 @@ data-analysis-internship-maincrafts/
 | Seaborn | Statistical plots |
 | NumPy | Numerical operations |
 | Google Colab | Cloud Jupyter Notebook environment |
-
 ---
-
 ## 💡 Key Insights from Task 2 (Titanic)
-
 - **Females** survived at ~74% vs **Males** at only ~19%
 - **1st Class** passengers had the highest survival rate (~63%)
 - **3rd Class** passengers had the lowest survival rate (~24%)
 - **Children (0–12)** had the highest survival among all age groups
 - Most passengers were between **20–35 years old**
-
 ---
-
+## 💡 Key Insights from Task 3 (Titanic Mini EDA)
+- **Age Group:** Children had the highest survival rate, reflecting the "women and children first" evacuation priority
+- **Embarkation Port:** Passengers boarding from Cherbourg (C) had a higher survival rate than those from Southampton (S), possibly linked to class distribution at each port
+- **Family Size:** Passengers with small families (1–3 members) survived at higher rates than solo travelers or those with very large families, likely due to coordination difficulty in big families
+- **Correlation Heatmap:** `Pclass` showed a negative correlation with survival (lower class number = higher survival), while `Fare` showed a positive correlation
+---
 ## 📬 Contact
-
 **Email:** mukundrajpurohit07@gmail.com  
 **LinkedIn:** [linkedin.com/in/mukund-rajpurohit-1b1104313](https://www.linkedin.com/in/mukund-rajpurohit-1b1104313/)  
 **GitHub:** [github.com/mukundraj2005](https://github.com/mukundraj2005)
