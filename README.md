@@ -10,84 +10,96 @@
 **Domain:** Data Analysis with Python
 **Duration:** 20 May 2026 – 20 July 2026 (8 Weeks)
 **Organization:** Maincrafts Technology
+**Email:** mukundrajpurohit07@gmail.com
+**LinkedIn:** [linkedin.com/in/mukund-rajpurohit-1b1104313](https://www.linkedin.com/in/mukund-rajpurohit-1b1104313/)
 
 ---
 
 ## 📁 Repository Structure
 
+```
 data-analysis-internship-maincrafts/
 ├── Task1_StudentPerformance_MukundRajpurohit.ipynb
 ├── Task2_TitanicDataset_MukundRajpurohit.ipynb
 ├── Task3_TitanicEDA_MukundRajpurohit.ipynb
 ├── Task4_VisualizationDashboard_MukundRajpurohit.ipynb
-└── requirements.txt
+├── Task5_MLPipeline_MukundRajpurohit.ipynb
+└── README.md
+```
 
 ---
 
 ## ✅ Tasks Completed
 
 ### 📌 Task 1 — Student Performance Dataset Analysis
-- Loaded and explored the Student Performance dataset (UCI ML Repository — 395 students, 33 features)
-- Performed data cleaning and handled missing values (zero missing confirmed)
-- Fixed G1, G2 columns stored as text → converted using pd.to_numeric()
-- Analyzed factors affecting student final grades (gender, study time, parental education)
-- Visualized score distributions using Matplotlib & Seaborn
-- Generated key statistics: average final grade G3 = 10.42/20, male avg 10.91 vs female 9.97
-- Libraries: Pandas, Matplotlib, Seaborn
+- Loaded and explored the Student Performance dataset (UCI ML Repository)
+- Performed data cleaning — checked for 0 missing values and 0 duplicates
+- Fixed G1, G2 columns stored as text using `pd.to_numeric()`
+- Analyzed correlation between study time and final grade (r = 0.10)
+- Identified 38 students who scored zero — likely non-attendance
+- **Visualisations:** Histogram of final grades, Scatter plot (study time vs grade), Bar chart by gender
+- **Libraries:** Pandas, Matplotlib, Seaborn
 
 ---
 
-### 📌 Task 2 — Titanic Dataset Survival Analysis
-- Loaded the Titanic dataset directly from URL (no Kaggle login needed)
-- Cleaned missing values (Age filled with median, Cabin dropped — 77% missing, Embarked filled with mode)
-- Answered key business questions:
-  - Who survived more — Males or Females?
-  - Did passenger class affect survival chances?
-  - What was the survival rate by age group?
-- Created 4 visualizations:
-  - Bar chart — Survival rate by Gender (with % labels)
-  - Bar chart — Survival rate by Passenger Class
-  - Histogram — Passenger Age Distribution (survived vs not survived)
-  - Bar chart — Survival rate by Age Group (Bonus)
-- Generated a final summary report with all key insights
-- Libraries: Pandas, Matplotlib, Seaborn, NumPy
+### 📌 Task 2 — Titanic Survival Analysis
+- Loaded Titanic dataset (891 records) directly from URL
+- Cleaned data: Age (median imputation), Cabin (dropped — 77% missing), Embarked (mode imputation)
+- Answered 3 key questions: Gender vs Survival, Class vs Survival, Age Group vs Survival
+- **Key Findings:**
+  - Female survival rate: **74.20%** vs Male: **18.89%**
+  - 1st Class: **62.96%** vs 3rd Class: **24.24%**
+  - Children (0–12) had the highest survival rate
+- **Visualisations:** 4 charts including paired bar charts and age histogram
+- **Libraries:** Pandas, Matplotlib, Seaborn, NumPy
 
 ---
 
-### 📌 Task 3 — Mini Exploratory Data Analysis (EDA) on Titanic Dataset
-- Performed a deeper EDA on the Titanic dataset, building on Task 2 with refined imputation and additional engineered features
-- Cleaned missing values (Age filled with mean, Embarked filled with mode, Cabin dropped)
-- Engineered new features:
-  - AgeGroup — binned into Child, Teen, Young Adult, Adult, and Senior using pd.cut()
-  - FamilySize — combined SibSp and Parch into a single feature
-- Answered key analysis questions using groupby-based insights:
-  - Survival rate by Age Group
-  - Survival rate by Embarkation Port
-  - Survival rate by Family Size
-- Created 4 visualizations:
-  - Histogram with KDE — Age Distribution of Passengers
-  - Correlation Heatmap — relationships between numeric features
-  - Bar chart — Survival Rate by Family Size
-  - Bar chart — Survival Rate by Age Group
-- Libraries: Pandas, NumPy, Matplotlib, Seaborn
+### 📌 Task 3 — Titanic Mini EDA (Exploratory Data Analysis)
+- Deeper EDA on Titanic dataset with feature engineering
+- Created `AgeGroup` using `pd.cut()` and `FamilySize = SibSp + Parch`
+- Analyzed survival by Age Group, Family Size, and Embarkation Port
+- **Key Findings:**
+  - Small families (2–3 members) survived more than solo travellers
+  - Cherbourg (C) port had highest survival rate (55.4%)
+  - Pclass: r = −0.34 (strongest negative correlation with survival)
+- **Visualisations:** Age KDE plot, Correlation Heatmap, Family Size bar chart, Age Group bar chart
+- **Libraries:** Pandas, Matplotlib, Seaborn, NumPy
 
 ---
 
-### 📌 Task 4 — Mini Visualization Dashboard (Matplotlib + Seaborn)
-- Built a complete mini data visualization dashboard inside a single Jupyter Notebook
-- Cleaned missing values and engineered features (AgeGroup + FamilySize) from scratch
-- Created 6 distinct chart types with clear markdown insight under each chart
-- Added a Bonus Facet Grid to compare survival across gender and class simultaneously
-- Charts included:
-  - Histogram — Age distribution of all passengers (split by survival)
-  - Bar Chart — Survival rate by Gender (with % annotations)
-  - Bar Chart — Survival rate by Passenger Class
-  - Boxplot — Fare distribution by Passenger Class (with survival hue)
-  - Scatterplot — Age vs Fare colored by Survival outcome
-  - Heatmap — Correlation matrix + feature-vs-survival bar chart
-  - Bonus Facet Grid — Survival rate by Class split across Gender
-- Generated a final dashboard summary report with all chart takeaways
-- Libraries: Pandas, NumPy, Matplotlib, Seaborn
+### 📌 Task 4 — Data Visualization Dashboard
+- Built a complete 6-chart visualization dashboard on the Titanic dataset
+- **Charts Created:**
+  1. Histogram — Age distribution
+  2. Bar Chart — Survival by Gender
+  3. Bar Chart — Survival by Passenger Class
+  4. Boxplot — Fare distribution by Class
+  5. Scatterplot — Age vs Fare (colored by Survival)
+  6. Heatmap — Correlation of numeric variables
+  7. **Bonus:** Facet Grid — Survival by Class split by Gender
+- **Key Finding:** Female 1st Class: **97% survival** vs Male 3rd Class: **14% survival**
+- **Libraries:** Pandas, Matplotlib, Seaborn, NumPy
+
+---
+
+### 📌 Task 5 — Complete Machine Learning Pipeline
+- Built a **full professional ML pipeline** using scikit-learn on the Titanic dataset
+- **Pipeline Steps:**
+  - Numeric: Median imputation → StandardScaler
+  - Categorical: Most-frequent imputation → OneHotEncoder
+  - Model: LogisticRegression (max_iter=1000)
+- **Train/Test Split:** 80/20 stratified split
+- **Evaluation Metrics:**
+  - Test Accuracy: ~81%
+  - ROC-AUC: ~0.87
+  - Full Classification Report (Precision, Recall, F1)
+  - Confusion Matrix
+  - ROC Curve
+- **5-Fold Cross-Validation:** CV ROC-AUC ~0.86 ± 0.03
+- **Model Persistence:** Saved trained pipeline as `model.joblib`
+- **Feature Importance:** Extracted Logistic Regression coefficients — Sex (female) was the strongest predictor
+- **Libraries:** Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Joblib
 
 ---
 
@@ -97,41 +109,29 @@ data-analysis-internship-maincrafts/
 |------|---------|
 | Python 3 | Core programming language |
 | Pandas | Data loading, cleaning, analysis |
-| Matplotlib | Data visualization |
-| Seaborn | Statistical plots |
 | NumPy | Numerical operations |
+| Matplotlib | Data visualisation |
+| Seaborn | Statistical plots |
+| Scikit-learn | ML pipeline, preprocessing, modelling, evaluation |
+| Joblib | Model persistence |
 | Google Colab | Cloud Jupyter Notebook environment |
+| GitHub | Version control & submission |
 
 ---
 
-## 💡 Key Insights from Task 2 (Titanic Survival Analysis)
-- Females survived at ~74% vs Males at only ~19%
-- 1st Class passengers had the highest survival rate (~63%)
-- 3rd Class passengers had the lowest survival rate (~24%)
-- Children (0–12) had the highest survival among all age groups
-- Most passengers were between 20–35 years old
+## 💡 Key Insights Across All Tasks
 
----
-
-## 💡 Key Insights from Task 3 (Titanic Mini EDA)
-- Age Group: Children had the highest survival rate, reflecting the "women and children first" evacuation priority
-- Embarkation Port: Passengers boarding from Cherbourg (C) had a higher survival rate than those from Southampton (S), possibly linked to class distribution at each port
-- Family Size: Passengers with small families (1–3 members) survived at higher rates than solo travelers or those with very large families
-- Correlation Heatmap: Pclass showed a negative correlation with survival, while Fare showed a positive correlation
-
----
-
-## 💡 Key Insights from Task 4 (Visualization Dashboard)
-- Gender was the strongest survival factor — females were 4x more likely to survive than males
-- Fare correlated positively (+0.26) with survival — higher fare = better cabin location = closer to lifeboats
-- Female 1st Class passengers had ~97% survival rate vs Male 3rd Class at only ~14%
-- Pclass (-0.34) and Fare (+0.26) were the strongest numeric predictors of survival
-- Age had minimal direct linear correlation with survival as a standalone variable
+- **Study time ≠ good grades** — correlation with final grade was only r = 0.10 (Task 1)
+- **Gender was the strongest survival factor** — females survived 4x more than males (Tasks 2, 3, 4, 5)
+- **Wealth impacted survival** — 1st Class passengers survived at 2.6x the rate of 3rd Class (Tasks 2, 4, 5)
+- **Small families survived more** — family size 2–3 had highest survival rate (Task 3)
+- **Logistic Regression achieved ~81% accuracy** as a strong interpretable baseline (Task 5)
+- **ROC-AUC of 0.87** means the model correctly ranks survivors above non-survivors 87% of the time (Task 5)
 
 ---
 
 ## 📬 Contact
 
 **Email:** mukundrajpurohit07@gmail.com
-**LinkedIn:** https://www.linkedin.com/in/mukund-rajpurohit-1b1104313/
-**GitHub:** https://github.com/mukundraj2005
+**LinkedIn:** [linkedin.com/in/mukund-rajpurohit-1b1104313](https://www.linkedin.com/in/mukund-rajpurohit-1b1104313/)
+**GitHub:** [github.com/mukundraj2005](https://github.com/mukundraj2005)
